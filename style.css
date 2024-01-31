@@ -1,0 +1,550 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: hsl(206, 94%, 87%);
+    font-family: Ubuntu;
+}
+
+main {
+    display: flex;
+    height: 70%;
+    width: 60%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: white;
+    justify-content: space-between;
+}
+
+.sidenav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 20px;
+    width: 25%;
+    margin-top: 15px;
+    background-color: hsl(243, 100%, 62%);
+    border-radius: 10px;
+    height: 85%;
+    margin-left: 15px;
+    color: white;
+    background-image: url(./assets/images/bg-sidebar-desktop.svg);
+    background-position-y: 100%;
+    background-size: 100%;
+    font-size: smaller;
+    background-repeat: no-repeat;
+}
+
+.pages {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+.texter {
+    display: flex;
+    height: 50px;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.no {
+    padding: 5px;
+    background-color: none;
+    border: 1px solid white;
+    border-radius: 50%;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+}
+
+#current {
+    background-color: hsl(206, 94%, 87%);
+}
+
+.form {
+    width: 55%;
+    color: hsl(213, 96%, 18%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 30px;
+    position: relative;
+    font-size: large;
+}
+
+.form form {
+    width: 100%;
+    padding: 20px 0px;
+}
+
+.form label {
+    margin-top: 10px;
+}
+
+.form input {
+    height: 35px;
+    width: 90%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: .5px solid gray;
+    border-radius: 7px;
+    margin: 5px 0px;
+    outline: none;
+}
+
+.form button {
+    position: absolute;
+    bottom: 5%;
+    right: 15%;
+    height: 35px;
+    width: 100px;
+    background-color: hsl(213, 96%, 18%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 35px;
+}
+
+.form p {
+    color: gray;
+    margin-top: 10px;
+}
+
+
+
+.plan {
+    width: 55%;
+    color: hsl(213, 96%, 18%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 30px;
+    position: relative;
+    font-size: large;
+}
+
+.cardcontainer {
+    display: flex;
+    gap: 20px;
+    padding: 15px 0px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px;
+    width: 120px;
+    border: 1px solid rgb(190, 190, 190);
+    align-items: flex-start;
+    padding: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    user-select: none;
+    cursor: pointer;
+}
+
+.cards p {
+    font-size: small;
+    color: gray;
+}
+
+.btn {
+    height: 30px;
+    width: 100%;
+    background-color: rgb(228, 228, 228);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 50px;
+    color: gray;
+    font-size: small;
+}
+
+.sbtn {
+    height: 90%;
+    width: 15%;
+    background-color: hsl(213, 96%, 18%);
+    border-radius: 1000px;
+    box-sizing: border-box;
+    padding: 3px;
+    user-select: none;
+}
+
+.checker {
+    width: 35%;
+    height: 100%;
+    background-color: white;
+    border-radius: 40px;
+}
+
+#currentplan {
+    color: hsl(213, 96%, 18%);
+    font-weight: 600;
+}
+
+#icon {
+    transition: all .5s;
+}
+
+
+#next {
+    position: absolute;
+    bottom: 5%;
+    right: 15%;
+    height: 35px;
+    width: 100px;
+    background-color: hsl(213, 96%, 18%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+#prev {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    height: 35px;
+    width: 100px;
+    color: rgb(158, 158, 158);
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    background-color: white;
+}
+
+
+.addon {
+    width: 55%;
+    color: hsl(213, 96%, 18%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 30px;
+    position: relative;
+    font-size: large;
+}
+
+.carders {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+.cardi {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    border: 1px solid gray;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 60px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.cardi input {
+    height: 20px;
+    width: 20px;
+    background-color: hsl(243, 100%, 62%);
+}
+
+.cardi h5 {
+    font-size: small;
+    font-weight: 400;
+}
+
+.cardi p {
+    font-size: small;
+}
+
+
+.summary {
+    width: 55%;
+    color: hsl(213, 96%, 18%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 30px;
+    position: relative;
+    font-size: large;
+}
+
+.thanksum {
+    width: 55%;
+    color: hsl(213, 96%, 18%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 30px;
+    position: relative;
+    font-size: large;
+}
+
+#currentcat {
+    background-color: rgb(181, 218, 241);
+    border: 2px solid blue;
+}
+
+.yearlydet {
+    font-size: smaller;
+    color: hsl(213, 96%, 18%);
+    margin-top: 10px;
+    display: none;
+}
+
+.form {
+    display: none;
+}
+
+.sum {
+    width: 90%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgb(235, 235, 235);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: small;
+    padding: 10px;
+}
+
+.row h5 {
+    font-size: medium;
+}
+
+.addona {
+    width: 100%;
+    border-top: 1px solid rgb(168, 168, 168);
+}
+
+.addrow {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: small;
+    padding: 10px;
+
+}
+
+.addrow h5 {
+    font-size: small;
+    color: gray;
+    font-weight: 400;
+}
+
+#change {
+    margin-top: 05px;
+    text-decoration: underline;
+    color: gray;
+    user-select: none;
+    cursor: pointer;
+}
+
+.total p {
+    font-size: medium;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.total h5 {
+    font-size: large;
+}
+
+.thank {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    margin-left: -40px;
+}
+
+
+@media only screen and (max-width:900px) {
+    main {
+        flex-direction: column;
+        height: fit-content;
+        width: 100%;
+        height: 100vh;
+        justify-content: flex-start;
+    }
+
+    .sidenav {
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: 0%;
+        height: 20%;
+        padding: 0%;
+        background-image: url(./assets/images/bg-sidebar-mobile.svg);
+    }
+
+    .texter {
+        display: none;
+    }
+
+    .form {
+        width: 90%;
+        justify-content: flex-start;
+    }
+
+    #next {
+        position: fixed;
+        bottom: 21%;
+        right: 15%;
+        height: 35px;
+        width: 100px;
+        background-color: hsl(213, 96%, 18%);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-weight: 600;
+    }
+
+    #prev {
+        position: fixed;
+        bottom: 21%;
+        right: 15%;
+        height: 35px;
+        width: 100px;
+        color: rgb(158, 158, 158);
+        border: none;
+        border-radius: 5px;
+        font-weight: 600;
+        background-color: white;
+    }
+
+    .form button {
+        position: fixed;
+        bottom: 21%;
+        right: 15%;
+        height: 35px;
+        width: 100px;
+        background-color: hsl(213, 96%, 18%);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-weight: 600;
+    }
+
+    .plan {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .cardcontainer {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 0px;
+        width: 100%;
+    }
+
+    .planner {
+        width: 100%;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        height: fit-content;
+        width: 100%;
+        border: 1px solid rgb(190, 190, 190);
+        align-items: center;
+        padding: 10px;
+        border-radius: 10px;
+        box-sizing: border-box;
+        user-select: none;
+        cursor: pointer;
+        gap: 20px;
+    }
+
+    .btn {
+        border-radius: 8px;
+        background-color: hsla(206, 94%, 87%, 0.877);
+    }
+
+    .addon {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .tex {
+        width: 100%;
+    }
+
+    .addon h4 {
+        font-size: 16px;
+    }
+
+    .cardi {
+        gap: 20px;
+    }
+
+    .summary {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .thanksum {
+        width: 95%;
+        box-sizing: border-box;
+        padding: 15px;
+    }
+
+    .thank {
+        margin: 0%;
+        padding: 0%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
